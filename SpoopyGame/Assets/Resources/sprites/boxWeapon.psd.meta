@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 76dd04d92a1be40428a2df0582ca3b20
+timeCreated: 1458010245
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: boxWeapon_0
+    21300002: boxWeapon_1
+    21300004: boxWeapon_2
+    21300006: boxWeapon_3
+    21300008: boxWeapon_4
+    21300010: boxWeapon_5
+    21300012: boxWeapon_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: boxWeapon_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 443
+        width: 482
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 95, y: -227}
+        - {x: 103, y: -227}
+        - {x: 113, y: -224}
+        - {x: 120, y: -218}
+        - {x: 128, y: -214}
+        - {x: 135, y: -210}
+        - {x: 146, y: -201}
+        - {x: 153, y: -197}
+        - {x: 158, y: -192}
+        - {x: 168, y: -184}
+        - {x: 193, y: -155}
+        - {x: 212, y: -131}
+        - {x: 219, y: -117}
+        - {x: 228, y: -98}
+        - {x: 232, y: -87}
+        - {x: 237, y: -71}
+        - {x: 241, y: -59}
+        - {x: 241, y: 60}
+        - {x: 238, y: 70}
+        - {x: 234, y: 78}
+        - {x: 233, y: 87}
+        - {x: 224, y: 107}
+        - {x: 220, y: 117}
+        - {x: 212, y: 131}
+        - {x: 203, y: 143}
+        - {x: 188, y: 161}
+        - {x: 162, y: 187}
+        - {x: 146, y: 200}
+        - {x: 134, y: 209}
+        - {x: 127, y: 213}
+        - {x: 111, y: 222}
+        - {x: 90, y: 230}
+        - {x: 67, y: 238}
+        - {x: 65, y: 239}
+        - {x: -61, y: 239}
+        - {x: -64, y: 237}
+        - {x: -74, y: 236}
+        - {x: -89, y: 231}
+        - {x: -100, y: 227}
+        - {x: -109, y: 224}
+        - {x: -117, y: 218}
+        - {x: -132, y: 211}
+        - {x: -137, y: 204}
+        - {x: -149, y: 197}
+        - {x: -164, y: 184}
+        - {x: -179, y: 168}
+        - {x: -197, y: 146}
+        - {x: -211, y: 128}
+        - {x: -224, y: 104}
+        - {x: -229, y: 93}
+        - {x: -232, y: 81}
+        - {x: -237, y: 64}
+        - {x: -241, y: 50}
+        - {x: -241, y: -53}
+        - {x: -237, y: -64}
+        - {x: -236, y: -69}
+        - {x: -232, y: -82}
+        - {x: -225, y: -103}
+        - {x: -216, y: -121}
+        - {x: -207, y: -134}
+        - {x: -194, y: -152}
+        - {x: -179, y: -170}
+        - {x: -166, y: -183}
+        - {x: -145, y: -200}
+        - {x: -132, y: -209}
+        - {x: -110, y: -222}
+        - {x: -89, y: -230}
+        - {x: -79, y: -234}
+        - {x: -68, y: -239}
+        - {x: 71, y: -239}
+        - {x: 78, y: -236}
+        - {x: 84, y: -231}
+        - {x: 93, y: -231}
+    - name: boxWeapon_1
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 208
+        width: 231
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 115.5, y: 92}
+        - {x: 112.5, y: 95}
+        - {x: -109.5, y: 95}
+        - {x: -115.5, y: 90}
+        - {x: -115.5, y: -89}
+        - {x: -109.5, y: -95}
+        - {x: 110.5, y: -95}
+        - {x: 115.5, y: -90}
+    - name: boxWeapon_2
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 166
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: boxWeapon_3
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 166
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: boxWeapon_4
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 166
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: boxWeapon_5
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 79
+        width: 93
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.5, y: 46}
+        - {x: -46.5, y: -46}
+        - {x: 46.5, y: -46}
+        - {x: 46.5, y: 46}
+    - name: boxWeapon_6
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 79
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 46.5}
+        - {x: -46.5, y: 25.5}
+        - {x: -46.5, y: -25.5}
+        - {x: -25.5, y: -46.5}
+        - {x: 40.5, y: -46.5}
+        - {x: 46.5, y: -31.5}
+        - {x: 46.5, y: 40.5}
+        - {x: 33.5, y: 46.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
