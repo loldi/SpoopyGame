@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class Move : MonoBehaviour {
-	
-	public float speed = 4.0f;
-	public GameObject splatBullet;
+
+	public float regularSpeed = 5.0f;
+	public float dashModifier = 2.0f;
+	public float currentSpeed = 5.0f;
 	public float horiz;
 	public float vert;
 	
@@ -13,12 +14,12 @@ public class Move : MonoBehaviour {
 		horiz = Input.GetAxis("Horizontal");
 		vert = Input.GetAxis("Vertical");
 		var move = new Vector3(horiz, vert, 0);
-		transform.position += move * speed * Time.deltaTime;
+		transform.position += move * currentSpeed * Time.deltaTime;
 
 		if (Input.GetKey(KeyCode.LeftShift)){
-			speed = 6.0f;
+			currentSpeed = regularSpeed + dashModifier;
 		} else {
-			speed = 4.0f;
+			currentSpeed = regularSpeed;
 		}
 
 	}

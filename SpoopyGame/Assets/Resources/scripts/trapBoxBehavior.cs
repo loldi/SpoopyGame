@@ -14,7 +14,7 @@ public class trapBoxBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (shootFrom.trapBoxPlaced) {
+		if (shootFrom.trapBoxPlaced && shootFrom.ghostCaptured == false) {
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				anim.SetBool ("boxActivated", true);
 			}
@@ -24,6 +24,9 @@ public class trapBoxBehavior : MonoBehaviour {
 		}
 		if (destroyTime < 0) {
 			Destroy (this.gameObject);
+			shootFrom.trapBoxWeapon = true;
 		}
 	}
+
 }
+

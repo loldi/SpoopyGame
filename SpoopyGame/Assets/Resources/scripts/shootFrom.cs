@@ -13,8 +13,9 @@ public class shootFrom : MonoBehaviour {
 	public GameObject normal;
 	public GameObject beam;
 	public GameObject trapBox;
-
-	public GameObject trapBoxReal;
+	public GameObject trapBoxIndicator;
+	public GameObject trapBoxSpawn;
+	public GameObject ghostFriend;
 
 	public  Slider weaponEnergy;
 
@@ -26,6 +27,8 @@ public class shootFrom : MonoBehaviour {
 	public static bool trapBoxWeapon;
 
 	public static bool trapBoxPlaced;
+
+	public static bool ghostCaptured = false;
 
 	//bool normalFire;
 	bool beamFire;
@@ -47,14 +50,12 @@ public class shootFrom : MonoBehaviour {
 		beam.SetActive(false);
 	
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 
 		if (Input.GetMouseButtonUp (0)) {
 
 			beamFire = false;
-			//normalFire = false;
 
 		}
 
@@ -67,8 +68,6 @@ public class shootFrom : MonoBehaviour {
 			normalWeapon = false;
 			beamWeapon = false;
 			trapBoxWeapon = true;
-
-
 		}
 
 		if(Input.GetKeyDown(KeyCode.Alpha2)){
@@ -80,7 +79,6 @@ public class shootFrom : MonoBehaviour {
 			normalWeapon = false;
 			beamWeapon = true;
 			trapBoxWeapon = false;
-			
 
 		}
 
@@ -93,7 +91,6 @@ public class shootFrom : MonoBehaviour {
 			normalWeapon = true;
 			beamWeapon = false;
 			trapBoxWeapon = false;
-
 		}
 
 
@@ -111,57 +108,55 @@ public class shootFrom : MonoBehaviour {
 				bPrefab.transform.parent = null;
 				bPrefab.AddForce (tank.transform.right * speed);
 			} 
-		
-
-
 		}
 
 		if (trapBoxWeapon) {
 
 			if (Input.GetMouseButtonDown (0)) {
 
-				Instantiate (trapBoxReal, new Vector2 (tank.transform.position.x, tank.transform.position.y), Quaternion.identity);
+				Instantiate (trapBoxSpawn, new Vector2 (tank.transform.position.x, tank.transform.position.y), Quaternion.identity);
 				trapBoxPlaced = true;
 				trapBoxWeapon = false;
+			}
+		}
+
+		if (ghostCaptured) {
+
+			if (Input.GetKeyDown (KeyCode.Space)) {
+
+				Instantiate (ghostFriend, new Vector2 (tank.transform.position.x, tank.transform.position.y), Quaternion.identity);
+				ghostCaptured = false;
+				trapBoxWeapon = true;
+				trapBoxPlaced = false;
 
 			}
+
+
 		}
 			
 		if(beamWeapon){
 
 			if (Input.GetMouseButton(0) && !outOfPower) {
-
 				beamFire = true;
-
-
 				if (beamFire) {
 					weaponEnergy.value -= .011f;
 				}
-
 			}
 		}
 
 		if (weaponEnergy.value < 1 && !beamFire) {
-
-		
 				weaponEnergy.value += .011f;
-
 			}
 
 		if (weaponEnergy.value == 0) {
-
 			outOfPower = true;
-
-
 		} else if (weaponEnergy.value > 0) {
-
-
 			outOfPower = false;
 		}
 
-		}
-
 	}
+
+}
 
 	
 

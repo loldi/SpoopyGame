@@ -53,13 +53,17 @@
      <Compile Include="Assets\Resources\scripts\beAtMouse.cs" />
      <Compile Include="Assets\Resources\scripts\beamWeapon.cs" />
      <Compile Include="Assets\Resources\scripts\directionalRotator.cs" />
+     <Compile Include="Assets\Resources\scripts\ghostFriendMovement.cs" />
      <Compile Include="Assets\Resources\scripts\ghostHP.cs" />
      <Compile Include="Assets\Resources\scripts\ghostMovement.cs" />
      <Compile Include="Assets\Resources\scripts\laserSight.cs" />
      <Compile Include="Assets\Resources\scripts\projectile.cs" />
      <Compile Include="Assets\Resources\scripts\rotateTowardMouse.cs" />
      <Compile Include="Assets\Resources\scripts\shootFrom.cs" />
+     <Compile Include="Assets\Resources\scripts\swirlScript.cs" />
      <Compile Include="Assets\Resources\scripts\trapBoxBehavior.cs" />
+     <Compile Include="Assets\Resources\scripts\whatFriendCanSee.cs" />
+     <Compile Include="Assets\Resources\scripts\whatGhostCanSee.cs" />
      <None Include="Assets\Resources\shaders\CircleShader.shader" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>

@@ -51,7 +51,7 @@ public class superNewSpawn : MonoBehaviour {
 	public int ROWS = 15;
 	float cellSize;
 	string[,] map;
-
+	string[,] walls;
 	public GameObject hallway;
 	public GameObject kitchenTile;
 	public GameObject bathroomTile;
@@ -63,12 +63,17 @@ public class superNewSpawn : MonoBehaviour {
 	public GameObject entranceTile;
 	public GameObject libraryTile;
 	public GameObject everythingelse;
+	public GameObject wallT;
+	public GameObject wallR;
+	public GameObject wallB;
+	public GameObject wallL;
 	public List<Room> blueprint = new List<Room>();
 
 
 	void Start(){
 		
 		map = new string[COLS,ROWS];
+		walls = new string[COLS,ROWS];
 		cellSize = Screen.width/(COLS+6);
 		generateMap();
 		drawField();
@@ -87,6 +92,7 @@ public class superNewSpawn : MonoBehaviour {
 		for (int i = 0; i < COLS; i++) {
 			for (int j = 0; j < ROWS; j++) {
 				map[i,j] = "empty";
+				walls[i,j] = "";
 			}
 		} 
 
@@ -196,11 +202,49 @@ public class superNewSpawn : MonoBehaviour {
 			for (int i=r.x1; i<r.x2; i++){
 				for (int j=r.y1; j<r.y2; j++){
 					map[i,j] = r.type;
+					if ((j == r.y2-1)){
+						walls[i,j] = "T";
+					}else{
+						walls[i,j] = "X";
+					}
+					if (i == r.x2-1){
+						walls[i,j] = walls[i,j]+"R";
+					}else{
+						walls[i,j] = walls[i,j]+"X";
+					}
+					if (j == r.y1){
+						walls[i,j] = walls[i,j]+"B";
+					}else{
+						walls[i,j] = walls[i,j]+"X";
+					}
+					if (i == r.x1){
+						walls[i,j] = walls[i,j]+"L";
+					}else{
+						walls[i,j] = walls[i,j]+"X";
+					}
+
+//					else if ((i == r.x1) && (j != r.y1) && (j != r.y2)){
+//						walls[i,j] = "L";
+//					}
+//					else if ((i == r.x2) && (j == r.y1)){
+//						walls[i,j] = "BR";
+//					}
+//					else if ((i == r.x2) && (j == r.y2)){
+//						walls[i,j] = "TR";
+//					}
+//					else if ((i == r.x2) && (j != r.y1) && (j != r.y2)){
+//						walls[i,j] = "R";
+//					}
+//					else if ((j == r.y1) && (i != r.x1) && (i != r.x2)){
+//						walls[i,j] = "B";
+//					}
+//					else if ((j == r.y2) && (i != r.x1) && (i != r.x2)){
+//						walls[i,j] = "T";
+//					}
 				}
 			}
 		}
 	}
-
 
 	//PUT THE TILES INTO GAME WORLD
 	void drawField(){
@@ -248,6 +292,18 @@ public class superNewSpawn : MonoBehaviour {
 					
 				}else{
 					Instantiate (everythingelse, new Vector2 (i*15, j*15), Quaternion.identity);
+				}
+				if (walls[i,j][0] == 'T'){
+					Instantiate (wallT, new Vector2 (i*15, j*15), Quaternion.identity);
+				}
+				if (walls[i,j][1] == 'R'){
+					Instantiate (wallR, new Vector2 (i*15, j*15), Quaternion.identity);
+				}
+				if (walls[i,j][2] == 'B'){
+					Instantiate (wallB, new Vector2 (i*15, j*15), Quaternion.identity);
+				}
+				if (walls[i,j][3] == 'L'){
+					Instantiate (wallL, new Vector2 (i*15, j*15), Quaternion.identity);
 				}
 			}
 		}
